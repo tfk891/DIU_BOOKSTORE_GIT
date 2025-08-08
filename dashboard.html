@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - DIU Bookstore</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <div id="nav-username"></div>
+    <div class="center">DIU Bookstore</div>
+    <div class="right">
+      <button onclick="window.location.href='add_book.html'">Add Book</button>
+      <input type="text" id="searchInput" placeholder="Search by name">
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Available Books</h2>
+    <div id="bookList"></div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
