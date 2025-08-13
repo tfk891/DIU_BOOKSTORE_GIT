@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard - DIU Bookstore</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
-    <div id="nav-username"></div>
+    <div id="nav-username">Toufikul Alam</div>
     <div class="center">DIU Bookstore</div>
     <div class="right">
       <button onclick="window.location.href='add_book.html'">Add Book</button>
@@ -17,8 +20,24 @@
   </nav>
 
   <div class="container">
+    <div class="welcome-section">
+      <h1>Welcome to DIU Book Store, Toufikul Alam!</h1>
+      <p>Discover a curated collection of books tailored for **Daffodil International University** students and faculty. Whether you're looking for textbooks, research materials, or leisure reading, we strive to bring you the best online bookstore experience.</p>
+      <p>Claim your favorite books with ease, explore new arrivals, and stay connected with our vibrant academic community.</p>
+    </div>
+    
     <h2>Available Books</h2>
-    <div id="bookList"></div>
+    <div id="bookList">
+      <div class="book-card-template" style="display: none;">
+        <img class="book-image" src="" alt="Book Cover">
+        <div class="book-details">
+          <h3 class="book-title"></h3>
+          <p class="book-author"></p>
+          <p class="book-price"></p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/utils.js"></script>
