@@ -1,176 +1,185 @@
-/* General Body and Font Styles from your provided CSS */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-image: url('../assets/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #222;
+
+  font-family: sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+  min-height: 100vh;
+
+  background-image: url('../assets/bg.jpg');  /* Make sure this image exists */
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  color: #222;
+
 }
 
-/* New Font for better readability on a dashboard */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+
+
+h1 {
+
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #fff;
+
+  text-shadow: 1px 1px 3px #000;
+
 }
 
-/* Navigation Bar Styling from your provided CSS */
+
+
+.desc {
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  color: #eee;
+
+  text-shadow: 1px 1px 2px #000;
+
+}
+
+
+
+.container {
+
+  max-width: 400px;
+
+  margin: 30px auto;
+
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+input, button {
+
+  display: block;
+
+  width: 100%;
+
+  margin: 10px 0;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+
+}
+
+
+
+button {
+
+  background-color: #00529b;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: background 0.3s;
+
+}
+
+
+
+button:hover {
+
+  background-color: #003f7d;
+
+}
+
+
+
 nav {
-  background: rgba(0, 82, 155, 0.95);
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  background: rgba(0, 82, 155, 0.95);
+
+  color: white;
+
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
 }
+
+
 
 nav .center {
-  font-size: 1.5em;
-  font-weight: bold;
+
+  font-size: 1.5em;
+
+  font-weight: bold;
+
 }
 
-#nav-username {
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 2px #000;
-}
+
 
 nav .right {
-  display: flex;
-  gap: 10px;
+
+  display: flex;
+
+  gap: 10px;
+
 }
+
+
 
 nav .right input {
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
+
+  padding: 5px;
+
+  border-radius: 5px;
+
+  border: none;
+
 }
 
-nav .right button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 
-nav .right button:hover {
-  background-color: #0056b3;
-}
 
-/* Main Container and Welcome Section */
-.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+#bookList .book {
 
-.welcome-section {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-left: 5px solid #00529b;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+  background: rgba(255, 255, 255, 0.9);
 
-.welcome-section h1 {
-  font-size: 2rem;
-  color: #004085;
-  margin-top: 0;
-  text-shadow: none; /* Override the body h1 style */
-}
+  padding: 10px;
 
-.welcome-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  text-shadow: none; /* Override the body desc style */
-}
+  margin: 10px 0;
 
-.welcome-section p strong {
-  font-weight: bold;
-}
+  border-left: 5px solid #00529b;
 
-h2 {
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 3px #000;
-  margin-bottom: 1.5rem;
-}
+  border-radius: 5px;
 
-/* Book List and Cards */
-#bookList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-}
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
-.book-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-}
-
-.book-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.book-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-}
-
-.book-details {
-  padding: 1rem;
-}
-
-.book-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #00529b;
-  margin: 0 0 0.5rem;
-}
-
-.book-author {
-  font-size: 0.9rem;
-  color: #777;
-  margin: 0 0 1rem;
-}
-
-.book-price {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #28a745;
-  margin: 0 0 1rem;
-}
-
-.add-to-cart-btn {
-  background-color: #00529b;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #003f7d;
 }
